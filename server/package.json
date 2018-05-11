@@ -1,0 +1,34 @@
+{
+  "name": "server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "engines": {
+    "node": "8.1.1",
+    "npm": "5.0.3"
+  },
+  "scripts": {
+    "start": "node index.js",
+    "server": "nodemon index.js",
+    "client": "npm run start --prefix client",
+    "dev": "concurrently \"npm run server\" \"npm run client\" \"npm run webhook\"",
+    "webhook": "chmod +x sendgrid_webhook.sh ./sendgrid_webhook.sh"
+  },
+  "author": "krishna",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "concurrently": "^3.5.1",
+    "cookie-session": "^1.3.2",
+    "express": "^4.16.2",
+    "localtunnel": "^1.9.0",
+    "lodash": "^4.17.10",
+    "mongoose": "^4.12.1",
+    "nodemon": "^1.17.4",
+    "passport": "^0.4.0",
+    "passport-google-oauth20": "^1.0.0",
+    "sendgrid": "^5.2.3",
+    "stripe": "^5.9.0",
+    "update": "^0.7.4"
+  }
+}
